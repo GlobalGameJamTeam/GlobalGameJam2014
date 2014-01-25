@@ -17,7 +17,8 @@ public class GestoreEnergia : MonoBehaviour {
 
 	void OnGUI () {
 		//GUI.TextField(new Rect (25, 25, 100, 30), energiaStr);
-		GUI.Box (new Rect (70, 10, Mathf.Clamp01 (energia / MAX_ENERGIA) * (Screen.width - 140), 20), energiaStr);
+		float width = Mathf.Clamp01 (energia / MAX_ENERGIA) * (Screen.width - 140);
+		GUI.Box (new Rect ((Screen.width-width)/2, 0, width, 20), energiaStr);
 	}
 
 	// Use this for initialization
