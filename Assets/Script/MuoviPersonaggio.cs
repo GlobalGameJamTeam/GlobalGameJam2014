@@ -5,6 +5,7 @@ public class MuoviPersonaggio : MonoBehaviour {
 
 	GestoreEnergia gestoreEnergia;
 	Rigidbody c;
+	public AudioClip[] movementClips;
 
 	// Use this for initialization
 	void Start () {
@@ -69,6 +70,10 @@ public class MuoviPersonaggio : MonoBehaviour {
 			}
 			//transform.Translate(Vector3.forward * velocita);
 
+			if(Input.GetAxis("Vertical") > 0){
+				int i = Random.Range(0, movementClips.Length);
+				AudioSource.PlayClipAtPoint(movementClips[i], this.transform.position);
+			}
 			c.AddRelativeForce(Vector3.forward * velocita);
 			//Debug.Log("velocita:"+velocita);
 		}
