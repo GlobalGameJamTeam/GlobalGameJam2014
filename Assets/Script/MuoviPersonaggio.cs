@@ -16,11 +16,12 @@ public class MuoviPersonaggio : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log("VITA   --->      " + gestoreEnergia.getEnergia ());
 		if (gestoreEnergia == null) {
 			return;
 		}
 
-		if (gestoreEnergia.getEnergia () >= 0) {
+		if (gestoreEnergia.getEnergia () >= 0.3f) {
 			float speedIncrese = 500;
 			float rotateSpeed = 50f;
 			{

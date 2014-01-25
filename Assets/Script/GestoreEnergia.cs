@@ -28,6 +28,7 @@ public class GestoreEnergia : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		energiaStr = "Energia: " + (int)energia;
-
+		if(energia < 0.4f)
+			Application.LoadLevel("GameOver");
 	}
 }
