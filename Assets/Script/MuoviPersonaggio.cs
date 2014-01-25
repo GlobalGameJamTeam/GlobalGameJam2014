@@ -6,6 +6,7 @@ public class MuoviPersonaggio : MonoBehaviour {
 	GestoreEnergia gestoreEnergia;
 	Rigidbody c;
 	public AudioClip[] movementClips;
+	bool toPlay = false;
 
 	// Use this for initialization
 	void Start () {
@@ -70,12 +71,22 @@ public class MuoviPersonaggio : MonoBehaviour {
 			}
 			//transform.Translate(Vector3.forward * velocita);
 
-			if(Input.GetAxis("Vertical") > 0){
+			if(Input.GetKeyDown(KeyCode.W)){
+				toPlay = true;
+			}
+			
+			if(toPlay){
+				toPlay = false;
 				int i = Random.Range(0, movementClips.Length);
-				AudioSource.PlayClipAtPoint(movementClips[i], this.transform.position);
+				StartCoroutine(waitEndAudio(i));
 			}
 			c.AddRelativeForce(Vector3.forward * velocita);
 			//Debug.Log("velocita:"+velocita);
 		}
+	}
+
+	public IEnumerator waitEndAudio(int i){
+		AudioSource.PlayClipAtPoint(movementClips[i], this.transform.position);
+		yield return new WaitForSeconds(movementClips[i].length);
 	}
 }
