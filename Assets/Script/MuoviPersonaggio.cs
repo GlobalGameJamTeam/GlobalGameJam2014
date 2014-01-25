@@ -6,8 +6,6 @@ public class MuoviPersonaggio : MonoBehaviour {
 	GestoreEnergia gestoreEnergia;
 	Rigidbody c;
 	public AudioClip[] movementClips;
-	bool toPlay = false;
-
 	bool playingMusic = false;
 
 	// Use this for initialization
@@ -90,10 +88,15 @@ public class MuoviPersonaggio : MonoBehaviour {
 					int i = Random.Range(0, movementClips.Length);
 					AudioSource.PlayClipAtPoint(movementClips[i], this.transform.position);
 					playingMusic = !playingMusic;
+					Invoke("enableSound", movementClips[i].length);
 				}
 				c.AddRelativeForce(Vector3.forward * velocita);
 			}
 			//Debug.Log("velocita:"+velocita);
 		}
+	}
+
+	void enableSound(){
+		playingMusic = false;
 	}
 }
