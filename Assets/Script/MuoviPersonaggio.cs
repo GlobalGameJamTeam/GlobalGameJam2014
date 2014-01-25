@@ -74,19 +74,6 @@ public class MuoviPersonaggio : MonoBehaviour {
 				c.MoveRotation(c.rotation * deltaRotation);
 			}
 
-			rotazioneY = Mathf.Min(gestoreEnergia.getEnergia(), Mathf.Abs(rotazioneY) );
-			rotazioneY = Mathf.Round(rotazioneY*100f)/100f;
-			gestoreEnergia.subEnergia(rotazioneY/rotateSpeed);
-
-			if (retro){
-				rotazioneY *= -1;
-			}
-			//transform.Rotate(Vector3.up, rotazione);
-			//Debug.Log("rotazione:"+rotazione);
-			deltaRotation = Quaternion.Euler(Vector3.up * rotazioneY);
-			c.MoveRotation(c.rotation * deltaRotation);
-			//c.MoveRotation();
-
 			{
 				float velocita = Input.GetAxis("Vertical") * speedIncrese * Time.deltaTime;
 				bool retro = false;
