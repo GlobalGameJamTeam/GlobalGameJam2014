@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class GestoreEnergia : MonoBehaviour {
-	private float energia = 100;
+	private const float MAX_ENERGIA = 100;
+	private float energia = MAX_ENERGIA;
 	private string energiaStr = "Energia: ";
 
 	public float getEnergia(){
@@ -15,7 +16,8 @@ public class GestoreEnergia : MonoBehaviour {
 	}
 
 	void OnGUI () {
-		GUI.TextField(new Rect (25, 25, 100, 30), energiaStr); 
+		//GUI.TextField(new Rect (25, 25, 100, 30), energiaStr);
+		GUI.Box (new Rect (70, 10, Mathf.Clamp01 (energia / MAX_ENERGIA) * (Screen.width - 140), 20), energiaStr);
 	}
 
 	// Use this for initialization
@@ -24,6 +26,7 @@ public class GestoreEnergia : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		energiaStr = "Energia: " + energia;
+		energiaStr = "Energia: " + (int)energia;
+
 	}
 }
