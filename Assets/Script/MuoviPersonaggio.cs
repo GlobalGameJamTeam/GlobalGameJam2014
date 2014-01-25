@@ -39,7 +39,7 @@ public class MuoviPersonaggio : MonoBehaviour {
 			Quaternion deltaRotation = Quaternion.Euler(Vector3.up * rotazioneX);
 			c.MoveRotation(c.rotation * deltaRotation);
 			//c.MoveRotation();
-		
+			
 			float rotazioneY = Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime;
 			retro = false;
 			if (rotazioneY < 0){
