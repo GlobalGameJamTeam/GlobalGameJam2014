@@ -35,7 +35,9 @@ public class MuoviPersonaggio : MonoBehaviour {
 			}
 			//transform.Rotate(Vector3.up, rotazione);
 			//Debug.Log("rotazione:"+rotazione);
-			c.AddRelativeTorque(Vector3.up * rotazione);
+			Quaternion deltaRotation = Quaternion.Euler(Vector3.up * rotazione);
+			c.MoveRotation(c.rotation * deltaRotation);
+			//c.MoveRotation();
 		
 			float velocita = Input.GetAxis("Vertical") * speedIncrese * Time.deltaTime;
 			retro = false;
