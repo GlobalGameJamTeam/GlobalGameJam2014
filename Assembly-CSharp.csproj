@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Script\FlashlightComponent.cs" />
      <Compile Include="Assets\Script\GestoreEnergia.cs" />
+     <Compile Include="Assets\Script\Menu.cs" />
      <Compile Include="Assets\Script\MuoviPersonaggio.cs" />
   </ItemGroup>
   <ItemGroup>
