@@ -6,6 +6,9 @@ public class GestoreEnergia : MonoBehaviour {
 	private float energia = MAX_ENERGIA;
 	private string energiaStr = "Energia: ";
 	private GUIStyle currentStyle;
+	public bool cheat;
+
+
 	public float getEnergia(){
 		return energia;
 	}
@@ -73,6 +76,8 @@ public class GestoreEnergia : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (cheat)
+						energia = 999999999;
 	}
 	
 	// Update is called once per frame
