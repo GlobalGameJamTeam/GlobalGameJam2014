@@ -8,6 +8,7 @@ public class Calore : MonoBehaviour
 		Material calore;
 		Material originale;
 		GestoreEnergia gestoreEnergia;
+		string labelText = "Off";
 
 		// Use this for initialization
 		void Start ()
@@ -56,5 +57,14 @@ public class Calore : MonoBehaviour
 						}
 				}
 		}
+
+	void OnGUI(){
+		if(on){
+			labelText = "On";
+		}else{
+			labelText = "Off";
+		}
+		GUI.Label(new Rect(Screen.width-100,90,Screen.width,Screen.height),("Termal (H): " + labelText));
+	}
 
 }

@@ -6,6 +6,11 @@ public class FlashlightComponent : MonoBehaviour {
 	public bool on;
 	GameObject flashlight;
 	GestoreEnergia gestoreEnergia;
+	string labelText = "Off";
+	public int a = 140;
+	public int b = Screen.height-50;
+	public int c = Screen.width-300;
+	public int d = 120;
 	
 	// Use this for initialization
 	void Start () {
@@ -28,5 +33,15 @@ public class FlashlightComponent : MonoBehaviour {
 			on = !on;
 		if (currentEnergy < 1f)
 			on = false;
+	}
+
+	void OnGUI(){
+		if(flashlight.light.enabled){
+			labelText = "On";
+		}else{
+			labelText = "Off";
+		}
+		GUI.Label(new Rect(Screen.width-100,50,Screen.width,Screen.height),("Sensors"));
+		GUI.Label(new Rect(Screen.width-100,70,Screen.width,Screen.height),("Light (ALT): " + labelText));
 	}
 }

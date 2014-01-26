@@ -82,7 +82,7 @@ public class Menu : MonoBehaviour {
 	{
 		BeginPage(400, 300);
 		if (GUILayout.Button("Start")) {
-			Application.LoadLevel("GlobalGameJam");
+			Application.LoadLevel("Livello1");
 		}
 		EndPage();
 	}
