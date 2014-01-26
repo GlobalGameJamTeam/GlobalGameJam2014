@@ -1,20 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Reload : MonoBehaviour {
+public class Cursor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Screen.showCursor = true;
-		Screen.lockCursor = false;
+		Screen.showCursor = false;
+		Screen.lockCursor = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
-	}
-
-	void OnMouseDown(){
-		Application.LoadLevel("Livello1");
 	}
 }
