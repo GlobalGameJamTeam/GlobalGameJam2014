@@ -59,6 +59,7 @@
      <Compile Include="Assets\Script\MusicBackground.cs" />
      <Compile Include="Assets\Script\PossibileBomba.cs" />
      <Compile Include="Assets\Script\PushObjects.cs" />
+     <None Include="Assets\Shaders\Particle Add.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

@@ -59,6 +59,7 @@
      <Compile Include="Assets\Script\MusicBackground.cs" />
      <Compile Include="Assets\Script\PossibileBomba.cs" />
      <Compile Include="Assets\Script\PushObjects.cs" />
+     <None Include="Assets\Shaders\Particle Add.shader" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
