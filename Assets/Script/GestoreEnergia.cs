@@ -13,6 +13,12 @@ public class GestoreEnergia : MonoBehaviour {
 		return energia;
 	}
 
+	public void setEnergia(float ene){
+		energia = ene;
+		if (energia > 100)
+			energia = 100;
+	}
+
 	public bool subEnergia(float value){
 		//Debug.Log ("Tolgo: "+value);
 		bool outVal = true;
