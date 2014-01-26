@@ -47,12 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Reload.cs" />
+     <Compile Include="Assets\Script\Calore.cs" />
      <Compile Include="Assets\Script\CheckFlip.cs" />
      <Compile Include="Assets\Script\FlashlightComponent.cs" />
      <Compile Include="Assets\Script\GestoreEnergia.cs" />
      <Compile Include="Assets\Script\Jump.cs" />
      <Compile Include="Assets\Script\Menu.cs" />
      <Compile Include="Assets\Script\MuoviPersonaggio.cs" />
+     <Compile Include="Assets\Script\PossibileBomba.cs" />
+     <Compile Include="Assets\Script\PushObjects.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

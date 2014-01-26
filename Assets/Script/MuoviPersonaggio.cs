@@ -16,7 +16,7 @@ public class MuoviPersonaggio : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("VITA   --->      " + gestoreEnergia.getEnergia ());
+		//Debug.Log("VITA   --->      " + gestoreEnergia.getEnergia ());
 		if (gestoreEnergia == null) {
 			return;
 		}

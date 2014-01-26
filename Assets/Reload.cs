@@ -14,6 +14,6 @@ public class Reload : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		Application.LoadLevel("GlobalGameJam");
+		Application.LoadLevel("Livello1");
 	}
 }
