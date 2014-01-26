@@ -41,8 +41,7 @@ public class FlashlightComponent : MonoBehaviour {
 		}else{
 			labelText = "Off";
 		}
-		GUI.Label(new Rect(Screen.width-80,50,Screen.width,Screen.height),("Sensors"));
-		GUI.Label(new Rect(Screen.width-80,70,Screen.width,Screen.height),("Light: " + labelText));
-		GUI.Label(new Rect(Screen.width-80,90,Screen.width,Screen.height),("Termal: " + labelText));
+		GUI.Label(new Rect(Screen.width-100,50,Screen.width,Screen.height),("Sensors"));
+		GUI.Label(new Rect(Screen.width-100,70,Screen.width,Screen.height),("Light (ALT): " + labelText));
 	}
 }
