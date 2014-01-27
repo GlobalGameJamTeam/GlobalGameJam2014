@@ -57,8 +57,11 @@
      <Compile Include="Assets\Script\Menu.cs" />
      <Compile Include="Assets\Script\MuoviPersonaggio.cs" />
      <Compile Include="Assets\Script\MusicBackground.cs" />
+     <Compile Include="Assets\Script\NewMenu.cs" />
      <Compile Include="Assets\Script\PossibileBomba.cs" />
      <Compile Include="Assets\Script\PushObjects.cs" />
+     <Compile Include="Assets\Script\onclickToMenu.cs" />
+     <Compile Include="Assets\pila.cs" />
      <None Include="Assets\Shaders\Particle Add.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
